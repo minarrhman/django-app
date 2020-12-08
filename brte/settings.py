@@ -25,7 +25,7 @@ SECRET_KEY = 'zm+%6gfu=gdi0zsjbbm5p=zw6(#fy=ff!zmw)bosmg-2#7(@&%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['djangotrial112.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,7 +47,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -82,12 +81,8 @@ WSGI_APPLICATION = 'brte.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd7oc4jei715pm3',
-        'USER': 'zztcdduceuvznk',
-        'PASSWORD': '6e14c072dcd63807cbece82b8891a9dcdaf4d2bfcf907c85fbbcc1dcb89a26d3',
-        'HOST': 'ec2-3-224-97-209.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
